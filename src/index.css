@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .max-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .set-bg-p {
+        @apply bg-sky-50;
+    }
+
+    .set-grad-p {
+        @apply bg-gradient-to-br from-green-400 hover:via-green-300 to-green-600 hover:to-green-200;
+    }
+
+
+    /* ===========================================================================
+  DEFAULT BEHAVIOUR
+  =========================================================================== */
+    body {
+        @apply relative max-container set-bg font-inter set-text;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-mont font-bold;
+    }
+
+    h1 {
+        @apply text-4xl;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    h6 {
+        @apply text-base;
+    }
+
+    p {
+        @apply text-base text-balance;
+    }
+
+    a {
+        @apply text-base text-balance-hover;
+    }
+
+    svg,
+    img {
+        @apply w-full h-full object-cover;
+    }
+
+    textarea,
+    input {
+        @apply text-base py-[2px] px-2 accent-focus outline-focus text-slate-800 rounded-sm;
+    }
+
+    button,
+    a,
+    Link {
+        @apply focus:outline-focus border-none;
+    }
+
+    a {
+        @apply text-green-500;
+    }
+
+
+
+    /* ===========================================================================
+    COLOR CLASSES
+    =========================================================================== */
+    .set-bg {
+        @apply bg-gray-100 dark:bg-gray-900;
+    }
+
+    .set-bg-light {
+        @apply bg-gray-200 dark:bg-gray-800;
+    }
+
+    .set-bg-dark {
+        @apply bg-gray-300 dark:bg-gray-950;
+    }
+
+    .clr-p {
+        @apply text-green-500 hover:text-green-500 dark:text-green-400 dark:hover:text-green-400;
+    }
+
+    .text-a {
+        @apply text-dark dark:text-light hover:text-light dark:hover:text-dark;
+    }
+
+    .set-text {
+        @apply text-neutral-900 dark:text-neutral-100;
+    }
+
+    .text-balance {
+        @apply text-neutral-700 dark:text-neutral-300;
+    }
+
+    .text-balance-hover {
+        @apply text-neutral-700 hover:text-dark dark:text-neutral-300 dark:hover:text-light
+    }
+
+    .manage-text {
+        @apply break-words break-all hyphens-auto;
+    }
+
+
+    /* ===========================================================================
+      COMMON CLASSES
+      =========================================================================== */
+
+    .section-padding {
+        @apply py-8 px-4 md:px-12 md:py-12 lg:px-16 lg:py-20;
+    }
+
+    .section-margin {
+        @apply my-12 mx-4 md:mx-12 md:my-16 lg:mx-16 lg:my24;
+    }
+
+    .card-container {
+        @apply grid gap-4 grid-cols-[repeat(auto-fill,_minmax(13rem,_1fr))];
+    }
+
+    .flex-center,
+    .icon-box {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+
+    .set-border-thin {
+        @apply border-solid border-slate-200/20;
+    }
+
+    .set-divide {
+        @apply border-solid border-slate-200/20;
+    }
+
+    /* ===========================================================================
+    BUTTON
+    =========================================================================== */
+    .btn {
+        @apply py-2 px-4 text-base capitalize inline-flex flex-center gap-2 border-transparent font-semibold whitespace-nowrap rounded transition-all focus:outline-2 focus:outline focus:outline-focus focus:outline-offset-0;
+    }
+
+    .btn-p {
+        @apply btn set-grad-p text-neutral-900 hover:text-neutral-900;
+    }
+
+    .btn-solid {
+        @apply btn bg-gray-800 text-neutral-100 dark:bg-gray-300 dark:text-neutral-900 focus:outline-offset-2;
+    }
+
+    .btn-soft {
+        @apply btn set-text bg-green-200 hover:bg-gray-50 dark:bg-green-900 dark:hover:bg-gray-950;
+    }
+
+    .btn-outline {
+        @apply btn set-text hover:bg-green-200 dark:hover:bg-green-200 outline outline-offset-[-2px] outline-2 outline-gray-700 focus:bg-green-200 dark:hover:text-neutral-900 dark:focus:bg-green-300 focus:outline-focus  dark:focus:text-neutral-900;
+    }
+
+    .btn-ghost {
+        @apply btn set-text hover:bg-gray-200 dark:hover:bg-gray-700;
+    }
+
+    .btn-ghost-link {
+        @apply btn set-text hover:text-green-500 dark:hover:text-green-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-200 dark:focus:bg-gray-700;
+    }
+
+    .btn-link {
+        @apply btn text-green-500 hover:text-green-600 dark:hover:text-green-400 hover:underline;
+    }
+
+    .btn-icon {
+        @apply btn aspect-square p-[2px];
+    }
+
+    .btn-danger {
+        @apply btn bg-danger text-white hover:bg-danger-dark focus:outline-none focus:ring-2 focus:ring-danger focus:ring-offset-2 focus:ring-offset-gray-200;
+    }
+
+    .btn-submit {
+        @apply btn text-neutral-100 bg-blue-600 hover:bg-blue-700;
+    }
+
+    /* ====================================================================
+    SPECIFIC STYLES   
+    ==================================================================== */
+    .sidebar-border{
+        border-radius: 0 .5rem .5rem 0;
+    }
+}
